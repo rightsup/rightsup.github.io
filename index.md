@@ -4,13 +4,51 @@ layout: default
 
 ### [<span aria-hidden="true" class="octicon octicon-link"></span>](#overview)Welcome to Rights'Up API documentation.
 
-All requests should be made against our Staging API endpoint: `http://www.rightsup-staging.com:180`. For requests to be authorized, we currently use HTTP header to old an `API_TOKEN`key which value should be set to `b49a0d5f3fbe`.
+All requests should be made against our Staging API endpoint: `http://www.rightsup-staging.com:180`.
 
 ### POSTMAN and examples
 
-We love postman application to test our API, and we've created a collection of examples that you can play against our staging api right out of the box. Just follow this link [https://www.getpostman.com/collections/4fdf3d275ae47639f897](https://www.getpostman.com/collections/4fdf3d275ae47639f897) or this button:
+We love postman application to test our API, and we've created a collection of examples that you can play against our staging api right out of the box. Just follow this link [https://www.getpostman.com/collections/6d79728607c8c71d266e](https://www.getpostman.com/collections/6d79728607c8c71d266e) or this button:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4fdf3d275ae47639f897)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6d79728607c8c71d266e)
+
+### Authenticate and get a token
+
+We use [JSON Web Tokens](http://jwt.io) to authenticate all API actions. These tokens are valid for 10 hours and require an existing RightsUp account. For testing purposes we've made an account in our test sandbox anyone can use. If you want get setup with a produciton account [get in touch](mailto:it@rightsup.com).
+
+#### Authenticate: `POST  http://www.rightsup-staging.com:180/auth`
+
+**Payload example:**
+
+```json
+{
+    "username": "test-user@rightsup.com",
+    "password": "password"
+}
+```
+
+**Returns:**
+
+```json
+{
+  "status": "authenticated",
+  "credentials": {
+    "id_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3JpZ2h0c3VwLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1NzZhNWQxNzM3NjY3NTNhNjg2ZGQxYjMiLCJhdWQiOiJSNlRuZDY5SE5QNVZRNVlJcU5weHc3cnBqVnUyUU5DdSIsImV4cCI6MTQ2NjYyNTU0NSwiaWF0IjoxNDY2NTg5NTQ1fQ.LWxvjkukgbBJeL__1YQn8YG7vkrkPRWvWvNQAULRfa8",
+    "access_token": "NwnffbJcEx0in9Cy",
+    "token_type": "bearer"
+  }
+}
+```
+
+The resulting `id_token` is a JSON Web Token (JWT learn more [here](https://jwt.io/)) signed with a private key.
+
+Use this token to authenticate future requests by including the **HTTP Header** with your correct JWT. It should be sent in the **AUTHORIZATION** field as a *Bearer* token.
+
+For Example:
+
+```
+AUTHORIZATION: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3JpZ2h0c3VwLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJhdXRoMHw1NzZhNWQxNzM3NjY3NTNhNjg2ZGQxYjMiLCJhdWQiOiJSNlRuZDY5SE5QNVZRNVlJcU5weHc3cnBqVnUyUU5DdSIsImV4cCI6MTQ2NjYyNTU0NSwiaWF0IjoxNDY2NTg5NTQ1fQ.LWxvjkukgbBJeL__1YQn8YG7vkrkPRWvWvNQAULRfa8
+```
 
 ### [<span aria-hidden="true" class="octicon octicon-link"></span>](#accounts)Client's account
 
