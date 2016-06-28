@@ -67,7 +67,9 @@ We provide an endpoint to create a new client, which will return a `client_slug`
 The only way to import data into Rights'Up is importing complete release, including recordings metadata. You may (and should) provide your internal id in the `external_ids` fields. These can be specified for recording, artist, label and release. By providing such ID, we'll avoid creating duplicates and make your life easier.
 
 ##### Import a release `POST /releases`  
+
 ##### Getting releases `GET /releases/unclaimed?client_slug=RUXXXX&includes=recordings,artists`  
+
 ##### Getting one releases `GET /releases/:id?includes=recordings,artists`  
 
 ### Claims
@@ -75,6 +77,7 @@ The only way to import data into Rights'Up is importing complete release, includ
 Neighbouring rights claims are applied at the recording level. You'll need to fetch recording ids from one of the release endpoints. Recordings can be claimed in batches. Typically the recordings for a whole release should be claimed in one batch.
 
 ##### Claim recordings as master owner `POST /producer_claims/master`  
+
 ##### Claim recordings as licensee `POST /producer_claims/licensee`  
 
 ### [<span aria-hidden="true" class="octicon octicon-link"></span>](#support-or-contact)Support or Contact
