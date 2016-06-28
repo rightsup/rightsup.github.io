@@ -16,7 +16,7 @@ We love postman application for API testing, we've created a collection of examp
 
 Our example suite relies on stored environment variables to keep your authorization token. You'll need to create an environment to run the suite correctly. Create a new empty environment to store the JWT between requests.
 
-![Imgur](http://i.imgur.com/f5GUpHB.gifv)
+![Imgur](http://i.imgur.com/f5GUpHB.gif)
 
 ### Authenticate and get a token
 
