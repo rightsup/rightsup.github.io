@@ -58,7 +58,7 @@ AUTHORIZATION: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL
 
 ### [<span aria-hidden="true" class="octicon octicon-link"></span>](#accounts)Client's account
 
-We provide an endpoint to create a new client, which will return a `client_slug` which should be used for every client actions. It will have a format like `RU0001`.
+We provide an endpoint to create a new client, which will return a `client_slug` which should be used for every client actions. The `client_slug` will have a format like `RU0001`.
 
 ##### Create client as producer: `POST /clients/producers`
 
