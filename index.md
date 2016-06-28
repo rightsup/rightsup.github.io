@@ -8,9 +8,9 @@ All requests should be made against our Staging API endpoint: `http://www.rights
 
 ### POSTMAN and examples
 
-We love postman application for API testing, we've created a collection of examples that you can play against our staging api right out of the box. Just follow this link [https://www.getpostman.com/collections/6d79728607c8c71d266e](https://www.getpostman.com/collections/6d79728607c8c71d266e) or this button:
+We love postman application for API testing, we've created a collection of examples that you can play against our staging api right out of the box. Just follow this link [https://www.getpostman.com/collections/4fdf3d275ae47639f897](https://www.getpostman.com/collections/4fdf3d275ae47639f897) or this button:
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/6d79728607c8c71d266e)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4fdf3d275ae47639f897)
 
 ### Set an Environment
 
