@@ -44,7 +44,7 @@ Our example suite relies on stored environment variables to keep your authorizat
 
 ![Imgur](http://i.imgur.com/f5GUpHB.gif)
 
-set `auth_token` to the value of `id_token` and update
+set the current value of `auth_token` to the value of `id_token` and update
 
 ### POSTMAN and examples
 
