@@ -4,13 +4,65 @@ layout: default
 
 ### [<span aria-hidden="true" class="octicon octicon-link"></span>](#overview)Welcome to Rights'Up API documentation.
 
-All requests should be made against our Staging API endpoint: `https://staging-api.rightsup.com`.
+1. [About](#about)
+2. [Authentication](#authentication)
+3. [POSTMAN and examples](#postman-and-examples)
+4. [Set an Environment](#set-an-environment)
+5. [Authenticate and get a token](#authenticate-and-get-a-token)
+6. [Support or Contact](#support-or-contact)
+7. [Annexes: Schemas & Concepts](#annexes-schemas--concepts)
+ * [Territory Coverage](#territory-coverage)
+ * [External Id](#external-id)
+ * [Percentage](#percentage)
+ * [Date](#date)
+ * [Release, Recording & Track](#release-recording--track)
+ * [Schemas of Track, Release-Track & ImportReleaseV2](#schemas-of-track-release-track--importreleasev2)
+ * [Minimum viable data](#minimum-viable-data)
+ * [Blockers](#blockers)
+ * [Artist Role](#artist-role)
+ * [Release Types](#release-types)
+ * [Release Formats](#release-formats)
+    
 
-### Authenticate and get a token
+
+All requests should be made against our Staging API endpoint: `https://staging-api.rightsup.com`
+
+### About
+
+This document is a high level overview on how to setup and claim a client repertoire from a third party application.
+It is not meant to be complete, but rather focused on third parties to have a quick understanding on how to integrate with the Rights’Up application.
+
+Our API follows REST philosophy and use JSON to transfer data.
+
+In this document we use a custom syntax to describe our endpoints that is straight to the point. 
+It’s highly inspired by our unit-test syntax written in Ruby. 
+The first term is the HTTP verb, the second is the relative url, and the third is the JSON payload. Authentication is ignored in this document.
+
+**Example**:
+`post '/accounts/v1/clients/:client_slug'`
+
+```json
+{
+  "client": {
+    "company_name": "Test Label LLC"
+  }
+}
+```
+
+In this example:
+
+- **post** is the http verb, 
+- **/accounts/v1/clients/:client_slug** is the relative path, 
+- **:client_slug** is a parameter to be replaced and 
+- **{"client": {"company_name": "Test Label LLC"}}** is the JSON payload.
+
+Most attributes should be self explanatory, but some schema are defined at the end of this document.
+
+### Authentication
 
 We use [JSON Web Tokens](http://jwt.io) to authenticate all API actions. These tokens are valid for 10 hours and require an existing RightsUp account. For testing purposes we've made an account in our test sandbox anyone can use. If you want get setup with a production account [get in touch](mailto:it@rightsup.com).
 
-#### Authenticate: `POST  /auth`
+#### Authenticate endpoint: `POST  /auth`
 
 **Payload example:**
 
@@ -36,17 +88,7 @@ We use [JSON Web Tokens](http://jwt.io) to authenticate all API actions. These t
 
 The resulting `id_token` is a JSON Web Token ([JWT learn more here](https://jwt.io/)) signed with a private key.
 
-You will use this token when setting you environment for requests
-
-### Set an Environment
-
-Our example suite relies on stored environment variables to keep your authorization token. You'll need to create an environment to run the suite correctly. Create a new empty environment to store the JWT between requests.
-
-![Imgur](http://i.imgur.com/f5GUpHB.gif)
-
-set the current value of `auth_token` to the value of `id_token` and update
-
-![Imgur](https://media.giphy.com/media/2YlfL4BkMNOOHlXHVC/giphy.gif)
+You will use this token when setting your environment for requests
 
 ### POSTMAN and examples
 
@@ -54,7 +96,487 @@ We love postman application for API testing, we've created a collection of examp
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/693405-06d64a27-61c7-d9a8-92cf-c0912597d4fe-KswV)
 
+### Set an Environment
 
-### [<span aria-hidden="true" class="octicon octicon-link"></span>](#support-or-contact)Support or Contact
+Our example suite relies on stored environment variables to keep your authorization token. You'll need to create an environment to run the suite correctly. Create a new empty environment to store the JWT between requests.
+
+![Imgur](https://media.giphy.com/media/8FS8RGCNWbVFFmKjoz/giphy.gif)
+
+### Authenticate and get a token
+
+Once your environment set, use the `POST  /auth` request to authenticate and get a token
+
+![Imgur](https://media.giphy.com/media/g0yAXyEercV3TiGzar/giphy.gif)
+
+**You are now ready use our staging Public API**
+
+### Support or Contact
 
 Having trouble with this documentation? Contribute to [https://github.com/rightsup/rightsup.github.io](https://github.com/rightsup/rightsup.github.io) or [contact us](mailto:it@rightsup.com) and we’ll help you sort it out.
+
+
+
+### Annexes: Schemas & Concepts
+
+#### Territory Coverage
+
+Appears in Contract & ProducerClaims
+
+the **type** can either be `world_except` or `only_specified`, the meaning of the **country_codes** options changes based on this type.
+If **type** is `world_except`, **country_codes** will means countries that are excluded from the World coverage, which can be empty to specify worldwide.
+If **type** is `only_specified`, **country_codes** means countries that are in the coverage, which shouldn't be empty.
+
+Examples:
+
+World except France:
+
+```json
+  "territory_coverage": {
+    "type": "world_except",
+    "country_codes": ["FR"]
+  }
+```
+
+Only France and Germany
+
+```json
+  "territory_coverage": {
+    "type": "only_specified",
+    "country_codes": ["FR", "DE"]
+  }
+```
+
+#### External Id
+
+```json
+"external_ids": [
+        {
+          "prodiver_name": "Deezer",
+          "id": 123456,
+          "url": "https://www.deezer.com/album/123456",
+        }
+]
+```
+
+Has two required keys, the **provider_name** which is constrained to a list of values: we need to add your **provider_name** in our data validation before you can submit your own external id.
+The **id** is a string (to be flexible with different kind of id) but is usually your database primary id. 
+You are very encourage to add your own id at the Artist, Release and Label level. If you think your Recording id would make sense as well, we should discuss about it first.
+If you have matched your entities with third party APIs (Spotify, Deezer, iTunes Music, Google Music, Beatport, …), or Collecting Societies/CMO (PPL, SCPP,  SoundExchange ...) you’re encourage to add those as extra external-id (you can add as many as you like).
+An **url** can optionally be provided.
+
+#### Percentage
+
+Are between 100 and 0. If you want to specify 20%, enter 20. Floats are accepted if you need more precision.
+
+#### Date
+
+The preferred format is **YY/MM/DD**, while "DD/MM/YY" is also accepted and separator can be "-" instead of "/". But inverting DD & MM will cause the system to swap day and month and will generate confusion.
+
+#### Release, Recording & Track
+
+A release is an album, an EP, a single ... which has at least one track, each track is an instance of a audio recording. Like a recording could appears on a Single release, and a Album release as well. This would mean one recording, two tracks, and two releases.
+
+Neighbouring rights applies to audio recordings. That’s why claims, declaration & revenues are primarily associated with recording_id. 
+Good to know: our system tend to merge recordings heavily to avoid invisible conflicts, aggregates multiple ISRCs. While you fetch a merged recording or release, we’ll automatically redirect the url to the new id.
+What we call a Track in this document, is usually the flat datastructure shown below.
+
+#### Schemas of Track, Release-Track & ImportReleaseV2
+
+Example are worth 1000 words, we’ll simply show subset of those schemas as examples and point the differences. That’s why we prepend any field with the entity type, to avoid confusion and have consistent naming across the different schemas.
+
+##### Track
+
+Are returned by those endpoints:
+
+```
+get "/tracks/v1/for_recording/:recording_id" 
+get "/tracks/v1/for_release/:release_id" 
+```
+
+A Track represent a recording on a release, therefore you can load tracks of a recording and you’ll have one Track per release (2 in the following example, one a original single, the other a remix EP).
+
+```json
+[
+  {
+    "release_id": "f286c9cd704f47b095afa64c171eb11c",
+    "release_title": "Mi Gente",
+    "label_catalog_number": "602557799385",
+    "label_id": "35c3697c32cd47c3bf6aa6b5fa35315a",
+    "label_name": "EMI Latin (LAT)",
+    "recording_display_artist": " J. Balvin, Willy Williams",
+    "recording_display_title": "Mi Gente",
+    "recording_duration_mm_ss": "03:09",
+    "recording_id": "ac3fc399c8254b598104e8d985a807f8",
+    "recording_isrcs": [
+      "FR22F1701790"
+    ],
+    "recording_title": "Mi Gente",
+    "recording_track_isrc": "FR22F1701790",
+    "recording_track_position": "1",
+    "id": "track_f286c9cd704f47b095afa64c171eb11cac3fc399c8254b598104e8d985a807f8"
+  },
+  {
+    "release_id": "a40e89c32bcb49958d331a1d7f5d616a",
+    "release_title": "Mi Gente (Remixes)",
+    "label_id": "35c3697c32cd47c3bf6aa6b5fa35315a",
+    "label_name": "EMI Latin (LAT)",
+    "recording_display_artist": " J. Balvin, Willy Williams",
+    "recording_display_title": "Mi Gente",
+    "recording_duration_mm_ss": "03:09",
+    "recording_id": "ac3fc399c8254b598104e8d985a807f8",
+    "recording_isrcs": [
+      "FR22F1701790"
+    ],
+    "recording_title": "Mi Gente",
+    "recording_track_isrc": "US22F1701790",
+    "recording_track_position": "1",
+    "id": "track_a40e89c32bcb49958d331a1d7f5d616aac3fc399c8254b598104e8d985a807f8"
+  }
+]
+```
+
+While inversely, you can have this schema for a release, having duplication of release metadata on each track.
+
+##### ReleaseTrack
+
+is probably with what you’ll work the most. It’s a slightly optimized schema from the Track when fetching a whole release, where we aggregate release metadata inside his own JSON object instead of repeating them in each track.
+This is returned by this endpoint:
+
+`get "/tracks/v1/releases/:release_id"`
+
+```json
+{
+  "release": {
+    "release_id": "f286c9cd704f47b095afa64c171eb11c",
+    "release_title": "Mi Gente",
+    "label_catalog_number": "602557799385",
+    "label_id": "35c3697c32cd47c3bf6aa6b5fa35315a",
+    "label_name": "EMI Latin (LAT)"
+  },
+  "tracks": [
+    {
+      "recording_display_artist": " J. Balvin, Willy Williams",
+      "recording_display_title": "Mi Gente",
+      "recording_duration_mm_ss": "03:09",
+      "recording_id": "ac3fc399c8254b598104e8d985a807f8",
+      "recording_isrcs": [
+        "FR22F1701790"
+      ],
+      "recording_title": "Mi Gente",
+      "recording_track_isrc": "FR22F1701790",
+      "recording_track_position": "1",
+      "id": "track_f286c9cd704f47b095afa64c171eb11cac3fc399c8254b598104e8d985a807f8"
+    }
+  ]
+}
+```
+
+##### ImportReleaseV2
+
+What you import through the `/music/v1/import_release_v2/` has the following structure and adds a deeper datastructure on the fields **external_ids** and **recording_(credited/extra)_artists** (which does not exists in Track), and in which **label** metadata have been extracted from the release object.
+
+```json
+{
+  "label": {
+    "label_catalog_number": "602557799385",
+    "label_id": "35c3697c32cd47c3bf6aa6b5fa35315a",
+    "label_name": "EMI Latin (LAT)",
+    "external_ids": []
+  },
+  "release": {
+    "release_id": "f286c9cd704f47b095afa64c171eb11c",
+    "release_title": "Mi Gente",
+    "external_ids": []
+  },
+  "tracks": [
+    {
+      "external_ids": [],
+      "recording_credited_artists": [],
+      "recording_display_artist": " J. Balvin, Willy Williams",
+      "recording_display_title": "Mi Gente",
+      "recording_duration_mm_ss": "03:09",
+      "recording_id": "ac3fc399c8254b598104e8d985a807f8",
+      "recording_isrcs": [
+        "FR22F1701790"
+      ],
+      "recording_title": "Mi Gente",
+      "recording_track_isrc": "FR22F1701790",
+      "recording_track_position": "1",
+      "id": "track_f286c9cd704f47b095afa64c171eb11cac3fc399c8254b598104e8d985a807f8"
+    }
+  ]
+}
+```
+
+#### Minimum viable data 
+
+Below see for the notes // required and explanation about each attributes. 
+
+`post music/v1/import_release_v2/` 
+
+```json
+{
+  "labels":
+  [
+    {
+      "label_catalog_number":"602567139546", // required  (if digital release only, the barcode can be used)
+      "label_name": "EMI Latin (LAT)", // required
+    }
+  ],
+  "release": {
+    "release_bar_code": "602567139546",                               // required
+    "release_c_date": "2017-06-30",              // required (first release date)
+    "release_c_year": 2017,                                           // required
+    "release_display_artist": "J. Balvin, Willy Williams",            // required
+    "release_distributors": ["Universal Music"],                      // required
+    "release_first_release_country_code": "FR",                       // required
+    "release_title": "Mi Gente",                                      // required
+  },
+  "tracks": [
+    {
+      // credit_artists are main artists, featured artists or remixers, 
+      // extra_artists are Producer, Programmer, Composer, … that
+      // are not displayed as “artist”
+      // required unless a recording_display_artist is present, then optional
+      "recording_credited_artists": [ 
+        {
+          "name": "J. Balvin"
+        }
+        {
+          "name": "Willy Williams",
+        } 
+        {
+          "name": "Dillon Francis",
+          "roles" : ["Remixed By"]        
+         }
+      ],
+      // at least one artist with role “Composed By” is required if the 
+      // recording is of type classical. 
+     // Roles can be specified in credited_artists or extra_artists
+      "recording_extra_artists": [
+        {
+          "name": "Willy Williams",
+          "roles" : ["Composed By", "Vocals"]
+         }
+      ],
+      "recording_display_artist": "J. Balvin, Willy Williams",        // required
+      "recording_display_title": "Mi Gente (Dillon Francis Remix)",   // required 
+      "recording_duration_mm_ss": "03:25",                            // required
+      "recording_library_type": "music",
+      "recording_p_country_code": "FR",                               // required            
+      "recording_p_year": 2017,                                       // required
+      "recording_title": "Mi Gente",      // required (should not include version)
+      "recording_track_isrc": "FR22F1702510",                         // required
+      "recording_track_position": "1",                                // required
+      "recording_version": "Dillon Francis Remix", 
+    }
+  ]
+}
+```
+
+#### Blockers
+
+Each collecting society has implemented its own set of validation rules for the metadatas we provide them with. Blockers are a combination of all these rules. Release and Recording attributes are analysed in an asynchronous job for Blockers. This allow us to declare eligible recordings in every territory where it has no blocker.
+
+#### Artist Role
+
+We accept many roles, so you should be able to import any role that you can think of, but here is a few common examples:
+
+- Bass
+- DJ Mix
+- Drum Programming
+- Drums
+- Guitar
+- Keyboards
+- Lyrics By
+- Mastered By
+- Mixed By
+- Music By
+- Performed By
+- Produced By
+- Programmed By
+- Recorded By
+- Remastered By
+- Remixed By
+- Vocals
+- Written By
+
+#### Release Types
+
+- LP
+- 16"
+- 12"
+- 12"
+- 11"
+- 10"
+- 9"
+- 8"
+- 8"
+- 7"
+- 6½"
+- 6"
+- 5½"
+- 5"
+- 5"
+- 4"
+- 3"
+- 2"
+- 8 ⅓ RPM
+- 16 ⅔ RPM
+- 33 ⅓ RPM
+- 45 RPM
+- 78 RPM
+- 21cm
+- 25cm
+- 27cm
+- 29cm
+- 35cm
+- 50cm
+- 80 RPM
+- 90 RPM
+- 15/16 ips
+- 1 ⅞ ips
+- 15 ips
+- 3 ¾ ips
+- 30 ips
+- 7 ½ ips
+- ⅛"
+- ¼"
+- ½"
+- 2-Track Mono
+- 2-Track Stereo
+- 4-Track Stereo
+- 10.5" NAB Reel
+- 3" Cine Reel
+- 5" Cine Reel
+- 7" Cine Reel
+- 2 Minute
+- 3 Minute
+- 4 Minute
+- Concert
+- Salon
+- Mini
+- Business Card
+- Shape
+- Minimax
+- CD-ROM
+- CDi
+- CD+G
+- HDCD
+- VCD
+- AVCD
+- SVCD
+- Blu-ray Audio
+- DVD-Audio
+- DVD-Data
+- DVD-Video
+- Hybrid
+- Multichannel
+- AAC
+- AIFC
+- AIFF
+- ALAC
+- AVI
+- FLAC
+- FLV
+- MP3
+- MPEG-4
+- ogg-vorbis
+- SHN
+- SWF
+- WAV
+- WMA
+- WMV
+- MP3 Surround
+- 3.5"
+- 5.25"
+- DualDisc
+- DVDplus
+- VinylDisc
+- Double Sided
+- Single Sided
+- Album
+- Mini-Album
+- EP
+- Maxi-Single
+- Single
+- Compilation
+- Stereo
+- Mono
+- Quadraphonic
+- Ambisonic
+- Card Backed
+- Club Edition
+- Copy Protected
+- Deluxe Edition
+- Enhanced
+- Etched
+- Jukebox
+- Limited Edition
+- Mispress
+- Misprint
+- Mixed
+- Numbered
+- Partially Mixed
+- Partially Unofficial
+- Picture Disc
+- Promo
+- Reissue
+- Remastered
+- Repress
+- Sampler
+- Special Edition
+- Test Pressing
+- Unofficial Release
+- White Label
+- Multichannel
+- NTSC
+- PAL
+- SECAM
+
+#### Release Formats
+
+- Vinyl
+- Acetate
+- Flexi-disc
+- Lathe Cut
+- Shellac
+- Pathé Disc
+- Edison Disc
+- Cylinder
+- CD
+- CDr
+- CDV
+- DVD
+- DVDr
+- HD DVD
+- HD DVD-R
+- Blu-ray
+- Blu-ray-R
+- SACD
+- 4-Track Cartridge
+- 8-Track Cartridge
+- Cassette
+- PlayTape
+- DAT
+- DCC
+- Microcassette
+- Reel-To-Reel
+- Betamax
+- MiniDV
+- U-matic
+- VHS
+- Video 2000
+- Video8
+- Laserdisc
+- SelectaVision
+- VHD
+- Minidisc
+- MVD
+- UMD
+- Floppy Disk
+- File
+- Memory Stick
+- Hybrid
+- All Media
+- Box Set
