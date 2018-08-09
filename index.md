@@ -16,8 +16,7 @@ layout: default
  * [Percentage](#percentage)
  * [Date](#date)
  * [Release, Recording & Track](#release-recording--track)
- * [Schemas of Track, Release-Track & ImportReleaseV2](#schemas-of-track-release-track--importreleasev2)
- * [Minimum viable data](#minimum-viable-data)
+ * [Schemas of Track, Release-Track](#schemas-of-track-release-track)
  * [Blockers](#blockers)
  * [Artist Role](#artist-role)
  * [Release Types](#release-types)
@@ -180,7 +179,7 @@ Neighbouring rights applies to audio recordings. That’s why claims, declaratio
 Good to know: our system tend to merge recordings heavily to avoid invisible conflicts, aggregates multiple ISRCs. While you fetch a merged recording or release, we’ll automatically redirect the url to the new id.
 What we call a Track in this document, is usually the flat datastructure shown below.
 
-#### Schemas of Track, Release-Track & ImportReleaseV2
+#### Schemas of Track, Release-Track
 
 Example are worth 1000 words, we’ll simply show subset of those schemas as examples and point the differences. That’s why we prepend any field with the entity type, to avoid confusion and have consistent naming across the different schemas.
 
@@ -303,72 +302,6 @@ What you import through the `/music/v1/import_release_v2/` has the following str
       "recording_track_isrc": "FR22F1701790",
       "recording_track_position": "1",
       "id": "track_f286c9cd704f47b095afa64c171eb11cac3fc399c8254b598104e8d985a807f8"
-    }
-  ]
-}
-```
-
-#### Minimum viable data 
-
-Below see for the notes // required and explanation about each attributes. 
-
-`post music/v1/import_release_v2/` 
-
-```json
-{
-  "labels":
-  [
-    {
-      "label_catalog_number":"602567139546", // required  (if digital release only, the barcode can be used)
-      "label_name": "EMI Latin (LAT)", // required
-    }
-  ],
-  "release": {
-    "release_bar_code": "602567139546",                               // required
-    "release_c_date": "2017-06-30",              // required (first release date)
-    "release_c_year": 2017,                                           // required
-    "release_display_artist": "J. Balvin, Willy Williams",            // required
-    "release_distributors": ["Universal Music"],                      // required
-    "release_first_release_country_code": "FR",                       // required
-    "release_title": "Mi Gente",                                      // required
-  },
-  "tracks": [
-    {
-      // credit_artists are main artists, featured artists or remixers, 
-      // extra_artists are Producer, Programmer, Composer, … that
-      // are not displayed as “artist”
-      // required unless a recording_display_artist is present, then optional
-      "recording_credited_artists": [ 
-        {
-          "name": "J. Balvin"
-        }
-        {
-          "name": "Willy Williams",
-        } 
-        {
-          "name": "Dillon Francis",
-          "roles" : ["Remixed By"]        
-         }
-      ],
-      // at least one artist with role “Composed By” is required if the 
-      // recording is of type classical. 
-     // Roles can be specified in credited_artists or extra_artists
-      "recording_extra_artists": [
-        {
-          "name": "Willy Williams",
-          "roles" : ["Composed By", "Vocals"]
-         }
-      ],
-      "recording_display_artist": "J. Balvin, Willy Williams",        // required
-      "recording_display_title": "Mi Gente (Dillon Francis Remix)",   // required 
-      "recording_duration_mm_ss": "03:25",                            // required
-      "recording_library_type": "music",
-      "recording_p_country_code": "FR",                               // required            
-      "recording_p_year": 2017,                                       // required
-      "recording_title": "Mi Gente",      // required (should not include version)
-      "recording_track_isrc": "FR22F1702510",                         // required
-      "recording_track_position": "1",                                // required
-      "recording_version": "Dillon Francis Remix", 
     }
   ]
 }
