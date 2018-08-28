@@ -1,0 +1,1080 @@
+# From a music console:
+#
+# ```ruby
+# require 'yml'
+# tracks = TrackPj::FromStreams.release(release_id)
+# release_tracks = TrackPj::EsModel.tracks_to_release_tracks(tracks)
+# puts release_tracks.to_yaml
+# ```
+
+release:
+  release_aggregate_version: 21
+  release_bar_code: '3596972969997'
+  release_c_date: '2014-02-03'
+  release_c_year: 2014
+  release_created_at: '2016-10-14T10:03:19.768Z'
+  release_credited_artists_array:
+  - Lilly Wood And The Prick
+  release_deezer_cover_big: https://cdns-images.dzcdn.net/images/cover/0fc7d18bbf55372a63846b19572b0e34/500x500-000000-80-0-0.jpg
+  release_deezer_cover_medium: https://cdns-images.dzcdn.net/images/cover/0fc7d18bbf55372a63846b19572b0e34/250x250-000000-80-0-0.jpg
+  release_deezer_cover_small: https://cdns-images.dzcdn.net/images/cover/0fc7d18bbf55372a63846b19572b0e34/56x56-000000-80-0-0.jpg
+  release_deezer_id: '7358970'
+  release_deezer_rank:
+  release_deleted_at:
+  release_discogs_id:
+  release_display_artist: Lilly Wood And The Prick
+  release_distributors:
+  release_duration_ms: 4587000
+  release_finetunes_id:
+  release_first_release_country_code: FR
+  release_formats:
+  - album
+  release_id: 45944bddaa834a298dd058fe47ce6059
+  release_import_provider: Deezer
+  release_imported_at: '2016-10-14T10:03:19.768Z'
+  release_imported_for:
+  release_merged_ids: []
+  release_target_id:
+  release_title: The Fight (Deluxe Version)
+  release_track_count: 18
+  release_types: album
+  release_updated_at: '2016-11-13T16:38:01.206Z'
+  release_updated_by: quentin@rightsup.com
+  label_agedi_declarable:
+  label_catalog_number: '3596972969997'
+  label_code:
+  label_gvl_declarable:
+  label_id: 03ba5d6ef35c4837b16c847dad94a65e
+  label_name: Wagram Music / Cinq 7
+  label_names: []
+  label_owner_client_name:
+  label_owner_client_slug:
+  label_sena_declarable:
+  label_spf_declarable:
+tracks:
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 14
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200010
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.866Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505674'
+  recording_deezer_preview_mp3: http://cdn-preview-0.deezer.com/stream/0ccabe1024183f001e336f2c2eaff93d-0.mp3
+  recording_deezer_rank: 482694
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Where I Want to Be (California) (CALIFORNIA)
+  recording_duration_mm_ss: '03:05'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: 963787b8dea64770a2721f8ec07e9ae0
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.866Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200010
+  recording_library_type: music
+  recording_merged_ids:
+  - 1c81a40a8b434ef3bf6bb2863543ee64
+  - b33099f5dfdc4b33bf40890b72801700
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Where I Want to Be (California)
+  recording_track_isrc: FR4DW1200010
+  recording_track_position: '1'
+  recording_updated_at: '2017-08-18T18:09:50.568Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version: CALIFORNIA
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 14
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200020
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.872Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505675'
+  recording_deezer_preview_mp3: http://cdn-preview-1.deezer.com/stream/19363e69f1be4d82d3246e4ea043e9db-0.mp3
+  recording_deezer_rank: 393087
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Let's Not Pretend
+  recording_duration_mm_ss: '03:40'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: 04fb89f8867c4220993dc018efd60462
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.872Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200020
+  recording_library_type: music
+  recording_merged_ids:
+  - ed60a9397ad849598b618ddf3a31dc17
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Let's Not Pretend
+  recording_track_isrc: FR4DW1200020
+  recording_track_position: '2'
+  recording_updated_at: '2017-08-18T18:09:51.049Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 14
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200030
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.878Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505676'
+  recording_deezer_preview_mp3: http://cdn-preview-d.deezer.com/stream/dff258009755097752b4312a5576159c-0.mp3
+  recording_deezer_rank: 383863
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Middle of the Night
+  recording_duration_mm_ss: '03:37'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: cff94cba0cd444f9b4d38ad4bb6a1721
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.878Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200030
+  recording_library_type: music
+  recording_merged_ids:
+  - d4635101f10e452298d97701510f1185
+  - f5a4b101fa7b4ef0bfe1f6b49a89197c
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Middle of the Night
+  recording_track_isrc: FR4DW1200030
+  recording_track_position: '3'
+  recording_updated_at: '2017-08-18T18:09:50.618Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 14
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200140
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.883Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505677'
+  recording_deezer_preview_mp3: http://cdn-preview-0.deezer.com/stream/0034de8427829e5dfdd58f6ee8e1e65b-0.mp3
+  recording_deezer_rank: 471951
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Le Mas
+  recording_duration_mm_ss: '03:12'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: 0b43cb8f9b714fab95326f19039127d9
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.883Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200140
+  - FR4DW1200160
+  recording_library_type: music
+  recording_merged_ids:
+  - 993e51887fbd480d9a407fff4c57dc68
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Le Mas
+  recording_track_isrc: FR4DW1200140
+  recording_track_position: '4'
+  recording_updated_at: '2017-08-18T18:09:51.023Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 14
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200040
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.888Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505678'
+  recording_deezer_preview_mp3: http://cdn-preview-5.deezer.com/stream/5eb56ae4821c7b0817797bd96b1a3ad4-0.mp3
+  recording_deezer_rank: 385167
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Guys in Bands
+  recording_duration_mm_ss: '03:33'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: 5983d6bdd6c145c88e24f7e2ead28f93
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.888Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200040
+  recording_library_type: music
+  recording_merged_ids:
+  - 47646617e80145dfaa171565cc79c237
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Guys in Bands
+  recording_track_isrc: FR4DW1200040
+  recording_track_position: '5'
+  recording_updated_at: '2017-08-18T18:09:50.954Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 12
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200050
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.893Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505679'
+  recording_deezer_preview_mp3: http://cdn-preview-b.deezer.com/stream/b6fb22efe5523489da31f6c7a6281a30-0.mp3
+  recording_deezer_rank: 373142
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Long Way Back
+  recording_duration_mm_ss: '04:19'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: e4449c0242b94e3ca0c2aeceb44cc09e
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.893Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200050
+  recording_library_type: music
+  recording_merged_ids:
+  - 78f4eced0b8e458fb3d3b53aeaa5931c
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Long Way Back
+  recording_track_isrc: FR4DW1200050
+  recording_track_position: '6'
+  recording_updated_at: '2017-08-18T18:09:50.828Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 14
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200060
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.898Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505680'
+  recording_deezer_preview_mp3: http://cdn-preview-d.deezer.com/stream/d4a8354b2a8df1251d45112f53407e97-0.mp3
+  recording_deezer_rank: 362323
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Mistakes
+  recording_duration_mm_ss: '03:43'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: 5f0d8d5b2de24151aa6295bdf8cd61ce
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.898Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200060
+  recording_library_type: music
+  recording_merged_ids:
+  - 88f9a74bde6149da9e464cdfc90d7f90
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Mistakes
+  recording_track_isrc: FR4DW1200060
+  recording_track_position: '7'
+  recording_updated_at: '2017-08-18T18:09:50.760Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 12
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200070
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.904Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505681'
+  recording_deezer_preview_mp3: http://cdn-preview-c.deezer.com/stream/c0f8a266ed92a101f76a48f06763021c-0.mp3
+  recording_deezer_rank: 350712
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Joni Mitchell
+  recording_duration_mm_ss: '04:35'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: 4ba6d0acda574c7ab082bc5e3b5be293
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.904Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200070
+  recording_library_type: music
+  recording_merged_ids:
+  - a132b25f36364cf68b50e8e1a9f8e36b
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Joni Mitchell
+  recording_track_isrc: FR4DW1200070
+  recording_track_position: '8'
+  recording_updated_at: '2017-08-18T18:09:50.862Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 12
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200080
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.908Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505682'
+  recording_deezer_preview_mp3: http://cdn-preview-7.deezer.com/stream/707aea5c3ef32b03a13d7037a74145c6-0.mp3
+  recording_deezer_rank: 374602
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Briquet
+  recording_duration_mm_ss: '04:27'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: f0b958f748b84093a1be83e9e82d51eb
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.908Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200080
+  recording_library_type: music
+  recording_merged_ids:
+  - 042f834707ac44ef9bb84ca6d2ebefcc
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Briquet
+  recording_track_isrc: FR4DW1200080
+  recording_track_position: '9'
+  recording_updated_at: '2017-08-18T18:09:50.976Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 14
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200090
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.913Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505683'
+  recording_deezer_preview_mp3: http://cdn-preview-6.deezer.com/stream/6b87dca9dff1467b084e87b74b65d2fd-0.mp3
+  recording_deezer_rank: 384046
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: No Mark
+  recording_duration_mm_ss: '03:11'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: 16c9f41875774a37bbb40a119fee7851
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.913Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200090
+  recording_library_type: music
+  recording_merged_ids:
+  - 51262fd9f1eb4b99990c642bf7b7164e
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: No Mark
+  recording_track_isrc: FR4DW1200090
+  recording_track_position: '10'
+  recording_updated_at: '2017-08-18T18:09:50.710Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 12
+  recording_artist_array:
+  - LILLY WOOD AND THE PRICK
+  - Lilly Wood
+  - The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1200100
+  recording_composer: HADIDA NILI
+  recording_created_at: '2016-10-14T10:03:19.918Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505684'
+  recording_deezer_preview_mp3: http://cdn-preview-d.deezer.com/stream/d470af5f674094f4f3cbbb6c23886cea-0.mp3
+  recording_deezer_rank: 438842
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: LILLY WOOD AND THE PRICK
+  recording_display_title: Into Trouble
+  recording_duration_mm_ss: '04:26'
+  recording_extra_artist_array:
+  - HADIDA NILI
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  - POP
+  recording_id: c4b43f35793c4f38bcf167a61bc3769f
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.918Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1200100
+  recording_library_type: music
+  recording_merged_ids:
+  - 49852202f5e0402e9694778eceb96b88
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2012
+  recording_publisher:
+  recording_target_id:
+  recording_title: Into Trouble
+  recording_track_isrc: FR4DW1200100
+  recording_track_position: '11'
+  recording_updated_at: '2017-08-18T18:09:50.912Z'
+  recording_updated_by: quentin@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 9
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1300300
+  recording_composer:
+  recording_created_at: '2016-10-14T10:03:19.923Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505685'
+  recording_deezer_preview_mp3: http://cdn-preview-7.deezer.com/stream/716b035a03e4ea5f704fa7b8d3070bdb-0.mp3
+  recording_deezer_rank: 338674
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Song to My Grandma
+  recording_duration_mm_ss: '03:39'
+  recording_extra_artist_array: []
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  recording_id: ceb824a69cae41789d0f60ef8cbd889f
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.923Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1300300
+  recording_library_type: music
+  recording_merged_ids: []
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2013
+  recording_publisher:
+  recording_target_id:
+  recording_title: Song to My Grandma
+  recording_track_isrc: FR4DW1300300
+  recording_track_position: '12'
+  recording_updated_at: '2017-01-05T16:08:26.036Z'
+  recording_updated_by: damien@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 9
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1300290
+  recording_composer:
+  recording_created_at: '2016-10-14T10:03:19.929Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505686'
+  recording_deezer_preview_mp3: http://cdn-preview-9.deezer.com/stream/9d710e1318502cd2dcdcade4cc9473bd-0.mp3
+  recording_deezer_rank: 315386
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Where I Want to Be California (Different Sleep Remix)
+  recording_duration_mm_ss: '04:01'
+  recording_extra_artist_array: []
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  recording_id: 90fd8b2f5a424da0b12d7cb032dab3c5
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.929Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1300290
+  recording_library_type: music
+  recording_merged_ids: []
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2013
+  recording_publisher:
+  recording_target_id:
+  recording_title: Where I Want to Be California (Different Sleep Remix)
+  recording_track_isrc: FR4DW1300290
+  recording_track_position: '13'
+  recording_updated_at: '2017-01-05T16:08:26.170Z'
+  recording_updated_by: damien@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 9
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1300250
+  recording_composer:
+  recording_created_at: '2016-10-14T10:03:19.934Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505687'
+  recording_deezer_preview_mp3: http://cdn-preview-a.deezer.com/stream/a5ba8888ecdf9691fc3724b795dbc216-0.mp3
+  recording_deezer_rank: 305344
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Middle of the Night (Yuksek Remix)
+  recording_duration_mm_ss: '05:03'
+  recording_extra_artist_array: []
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  recording_id: 924fbd2681494a6a84450aca0901058d
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.934Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1300250
+  recording_library_type: music
+  recording_merged_ids: []
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2013
+  recording_publisher:
+  recording_target_id:
+  recording_title: Middle of the Night (Yuksek Remix)
+  recording_track_isrc: FR4DW1300250
+  recording_track_position: '14'
+  recording_updated_at: '2017-01-05T16:08:26.226Z'
+  recording_updated_by: damien@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 9
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1300270
+  recording_composer:
+  recording_created_at: '2016-10-14T10:03:19.939Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505688'
+  recording_deezer_preview_mp3: http://cdn-preview-e.deezer.com/stream/e415688db57ab2cc9be3f49b3af10afd-0.mp3
+  recording_deezer_rank: 292385
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Middle of the Night (Dinovski Remix)
+  recording_duration_mm_ss: '04:03'
+  recording_extra_artist_array: []
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  recording_id: 6d5e3c6618d74f9bb5aa124e76594943
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.939Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1300270
+  recording_library_type: music
+  recording_merged_ids: []
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2013
+  recording_publisher:
+  recording_target_id:
+  recording_title: Middle of the Night (Dinovski Remix)
+  recording_track_isrc: FR4DW1300270
+  recording_track_position: '15'
+  recording_updated_at: '2017-01-05T16:08:26.299Z'
+  recording_updated_by: damien@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 9
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1300310
+  recording_composer:
+  recording_created_at: '2016-10-14T10:03:19.946Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505689'
+  recording_deezer_preview_mp3: http://cdn-preview-0.deezer.com/stream/09f01cb5ee031f60baec9df5c0c5a6a8-0.mp3
+  recording_deezer_rank: 230551
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Middle of the Night (Druzzi Remix)
+  recording_duration_mm_ss: '08:11'
+  recording_extra_artist_array: []
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  recording_id: 6ab5a662780448bfb63741530f38504c
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.946Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1300310
+  recording_library_type: music
+  recording_merged_ids: []
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2013
+  recording_publisher:
+  recording_target_id:
+  recording_title: Middle of the Night (Druzzi Remix)
+  recording_track_isrc: FR4DW1300310
+  recording_track_position: '16'
+  recording_updated_at: '2017-01-05T16:08:26.431Z'
+  recording_updated_by: damien@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 9
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1300280
+  recording_composer:
+  recording_created_at: '2016-10-14T10:03:19.951Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505690'
+  recording_deezer_preview_mp3: http://cdn-preview-b.deezer.com/stream/bcd82e1fa9cc99eecfae34a72fbf1911-1.mp3
+  recording_deezer_rank: 303433
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Middle of the Night (Ulysses Remix)
+  recording_duration_mm_ss: '07:05'
+  recording_extra_artist_array: []
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  recording_id: bdebb54122bd40f686e5a09f7efdbdf2
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.951Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1300280
+  recording_library_type: music
+  recording_merged_ids: []
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2013
+  recording_publisher:
+  recording_target_id:
+  recording_title: Middle of the Night (Ulysses Remix)
+  recording_track_isrc: FR4DW1300280
+  recording_track_position: '17'
+  recording_updated_at: '2017-01-05T16:08:26.573Z'
+  recording_updated_by: damien@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
+- client_slugs_with_performer_claims: []
+  client_slugs_with_producer_claims:
+  - RU0059
+  producer_claims_in_conflict: false
+  recording_aggregate_version: 9
+  recording_artist_array:
+  - Lilly Wood
+  - The Prick
+  - Lilly Wood And The Prick
+  recording_author: ''
+  recording_best_isrc: FR4DW1300320
+  recording_composer:
+  recording_created_at: '2016-10-14T10:03:19.956Z'
+  recording_deezer_artist_id:
+  recording_deezer_artist_picture_big:
+  recording_deezer_artist_picture_medium:
+  recording_deezer_artist_picture_small:
+  recording_deezer_id: '74505691'
+  recording_deezer_preview_mp3: http://cdn-preview-7.deezer.com/stream/7d40ecb19c8293957ca1c9856baa7636-0.mp3
+  recording_deezer_rank: 363758
+  recording_deleted_at:
+  recording_discogs_id:
+  recording_display_artist: Lilly Wood & The Prick
+  recording_display_title: Long Way Back (Radio Edit)
+  recording_duration_mm_ss: '02:37'
+  recording_extra_artist_array: []
+  recording_first_publication_date:
+  recording_first_release_country_code:
+  recording_first_release_date:
+  recording_genres:
+  - Alternative
+  recording_id: 45cedbe79aaa4810b875defdf971656e
+  recording_import_provider: Deezer
+  recording_imported_at: '2016-10-14T10:03:19.956Z'
+  recording_is_classical: false
+  recording_is_video: false
+  recording_isrcs:
+  - FR4DW1300320
+  recording_library_type: music
+  recording_merged_ids: []
+  recording_p_country_code: FR
+  recording_p_owner_country_code: FR
+  recording_p_owner_name: Choke Industry
+  recording_p_owner_slug: RU0059
+  recording_p_year: 2013
+  recording_publisher:
+  recording_target_id:
+  recording_title: Long Way Back (Radio Edit)
+  recording_track_isrc: FR4DW1300320
+  recording_track_position: '18'
+  recording_updated_at: '2017-01-05T16:08:26.732Z'
+  recording_updated_by: damien@rightsup.com
+  recording_version:
+  repertoire_client_slugs:
+  - RU0059
